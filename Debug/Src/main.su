@@ -1,4 +1,4 @@
-main.c:69:10:calculateVoices	64	static
+main.c:69:10:calculateVoices	80	static
 main.c:86:10:calculateSample	0	static
 main.c:99:6:HAL_I2SEx_TxRxHalfCpltCallback	8	static
 main.c:108:6:HAL_I2SEx_TxRxCpltCallback	8	static

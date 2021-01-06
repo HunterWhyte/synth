@@ -3,7 +3,7 @@ f = open("midi.txt", 'r')
 pitches = f.read().rstrip().split("\n")
 #I2S3.RealAudioFreq=46.875 KHz
 sampleRate = 46875
-sineSize = 256 # 8 bit
+sineSize = 4096 # 12 bit
 
 f1 = open("MIDI_LUT.txt", 'w')
 percentErrors = []
@@ -11,8 +11,8 @@ absoluteErrors = []
 f1.write("{")
 note = 0
 for i in pitches:
-    jump = (float(i)/(sampleRate))*(sineSize) # frequency/(samplerate*LUTsize) = 8 bits of integer + fractional component
-    jump = int(jump*(2**24))# = 32 bit integer
+    jump = (float(i)/(sampleRate))*(sineSize) # frequency/(samplerate*LUTsize) = 12 bits of integer + fractional component
+    jump = int(jump*(2**20))# = 12 + 20 = 32 bit integer
     #jump = jump>>24
     #jump = jump<<24
     print(hex(jump))

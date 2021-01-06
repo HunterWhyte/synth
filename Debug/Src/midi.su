@@ -1,4 +1,4 @@
 midi.c:4:9:readUserInput	16	static
-midi.c:10:6:noteOff	8	static
-midi.c:22:6:noteOn	12	static
-midi.c:42:6:getMIDI	8	static
+midi.c:10:6:noteOff	12	static
+midi.c:22:6:noteOn	16	static
+midi.c:45:6:getMIDI	8	static

@@ -23,6 +23,8 @@ void noteOn(uint8_t note, uint8_t vel){
 
 	for(int i = 0; i<numVoices; i++) {
 		if(voices[i].note == 0){
+			voices[i].jump = (MIDI_LUT[note]);
+
 			voices[i].note=note;
 			voices[i].amp_scaler = ((float)velocity_LUT[vel])/128;
 			voices[i].pos = 0;
@@ -31,6 +33,7 @@ void noteOn(uint8_t note, uint8_t vel){
 			return;
 		}
 	}
+	voices[numVoices-1].jump = (MIDI_LUT[note]);
 	voices[numVoices-1].note=note;
 	voices[numVoices-1].amp_scaler = ((float)velocity_LUT[vel])/128;
 	voices[numVoices-1].pos = 0;

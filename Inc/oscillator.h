@@ -15,8 +15,8 @@
 
 typedef struct Oscillator
 {
-    uint16_t jump;
-    uint16_t pos;
+	uint32_t jump;
+	uint32_t pos;
     uint16_t amp;
     uint8_t note;
     float amp_scaler;
