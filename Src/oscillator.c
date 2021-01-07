@@ -31,6 +31,8 @@ osc updateOsc(osc o, unsigned char wave, uint16_t pitchMod, uint16_t ampMod){
 				y = (uint64_t) ((o.pos&0x00FFFFFF)*(y0-y1));
 				o.amp = y0 - (uint16_t) (y>>24);
 			}*/
+            o.amp = (o.amp>>1) + (o.pos>>21); // sawtooth wave
+
         }
         else if (wave == 1){
             o.amp = 0xFFFF*((o.pos)>=(32767)); // square wave

@@ -159,10 +159,10 @@ int main(void)
 	  voices[i].env = &envelopes[i];
 	  voices[i].env->state = IDLE;
 	  voices[i].env->output = 0x0000;
-	  voices[i].env->sustainLevel = 0xFEEE;
-	  voices[i].env->decayRate  = 0xF;
+	  voices[i].env->sustainLevel = 0xFA00;
+	  voices[i].env->decayRate  = 0xD;
 	  voices[i].env->attackRate = 0xFA;
-	  voices[i].env->releaseRate = 0xF;
+	  voices[i].env->releaseRate = 0xFA;
 	  /*
 	  setTargetRatioA(voices[i].env,100);
 	  setTargetRatioDR(voices[i].env,100);
